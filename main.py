@@ -42,3 +42,5 @@ for augalas in augalai:
     if len(augalas) >= 7:
         count += 1
 print("Ilgi", count)
+
+print("hi")
