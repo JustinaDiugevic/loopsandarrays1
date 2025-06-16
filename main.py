@@ -1,3 +1,5 @@
+import random
+
 for i in range(10):
     print("labas")
 for i in range(10):
@@ -43,4 +45,19 @@ for augalas in augalai:
         count += 1
 print("Ilgi", count)
 
-print("hi")
+for augalas in augalai:
+    if 5 <= len(augalas) <= 10:
+        count += 1
+print("Vidutiniai", count)
+
+skaiciai = [random.randint(0, 300) for _ in range(300)]
+
+count = 0
+
+for skaicius in skaiciai:
+    if skaicius > 150:
+        count += 1
+    if skaicius > 275:
+        print("[" + str(skaicius) + "]", end=' ')
+    else:
+        print(skaicius, end=' ')
