@@ -61,3 +61,31 @@ for skaicius in skaiciai:
         print("[" + str(skaicius) + "]", end=' ')
     else:
         print(skaicius, end=' ')
+print()
+
+
+skaiciai = [i for i in range(1, 3001) if i % 77 == 0]
+print(*skaiciai, sep=',')
+
+for i in range(25):
+    print('* ' * 25)
+
+
+
+while True:
+    result = random.randint(0, 1)
+    if result == 0:
+        print("H")
+        break
+    else:
+        print("S")
+
+
+count = 0
+while count < 3:
+    result = random.randint(0, 1)
+    if result == 0:
+        count += 1
+        print("H")
+    else:
+        print("S")
