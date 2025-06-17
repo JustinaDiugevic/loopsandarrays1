@@ -225,3 +225,23 @@ print("Suma: ", sum(array))
 naujas_masyvas = [reiksme - indeksas for indeksas, reiksme in enumerate(array)]
 print("Naujas masyvas:", naujas_masyvas)
 
+poriniu_masyvas = []
+neporiniu_masyvas = []
+for i in range(len(array)):
+    if i % 2 == 0:
+        poriniu_masyvas.append(array[i])
+    else:
+        neporiniu_masyvas.append(array[i])
+
+print("Poriniu masyvas", poriniu_masyvas)
+print("Neporiniu masyvas", neporiniu_masyvas)
+
+for i in range(len(poriniu_masyvas)):
+    if poriniu_masyvas[i] > 15:
+        poriniu_masyvas[i] = 0
+print("Naujas masyvas:", poriniu_masyvas)
+
+for i in range(len(array)):
+    if array[i] > 10:
+        print("Pirmas indeksas su reikšme > 10:", i)
+        break
