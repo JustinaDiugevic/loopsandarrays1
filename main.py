@@ -123,3 +123,60 @@ while petro_count < 222 and kazio_count < 222:
     else:
         winner = "Lygiosios"
 print(f"Petro taskai: {petro_taskai}, Kazio taskai: {kazio_taskai}. Laimejo: {winner}")
+
+print("8 sunkesni uzduotis".center(60, "_"))
+
+ikalta_count = 0
+smugiai_count = 0
+
+vinys = 5
+ilgis = 85
+
+for vinis in range(1, vinys + 1):
+    ikalta_count = 0
+    smugiai_count = 0
+    while ikalta_count < ilgis:
+        smugio_gylis = random.randint(5, 20)
+        ikalta_count += smugio_gylis
+        smugiai_count += 1
+
+
+    print(f"{vinis} vinis ikaltas per {smugiai_count} smūgius.")
+
+for vinis in range(1, vinys + 1):
+    ikalta_count = random.randint(0, 1)
+    smugiai_count = 0
+    while ikalta_count < ilgis:
+        smugio_gylis = random.randint(20, 30)
+        ikalta_count += smugio_gylis
+        smugiai_count += 1
+    print(f"{vinis} vinis ikaltas per {smugiai_count} smūgius.")
+
+print("4 sunkesni uzduotis".center(60, "_"))
+
+dydis = 25
+
+for i in range(dydis):
+    for x in range(dydis):
+        if i == x or x == dydis - i - 1:
+            print("?", end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+print("7 uzduotis".center(60, "_"))
+
+eilutes = 21
+vidurys = eilutes // 2
+
+for i in range(vidurys + 1):
+    tarpai = ' ' * (vidurys - i)
+    zvaigzdutes = '*' * (2 * i + 1)
+    print(tarpai + zvaigzdutes)
+
+
+for i in range(vidurys - 1, -1, -1):
+    tarpai = ' ' * (vidurys - i)
+    zvaigzdutes = '*' * (2 * i + 1)
+    print(tarpai + zvaigzdutes)
+
