@@ -89,3 +89,37 @@ while count < 3:
         print("H")
     else:
         print("S")
+
+
+count = 0
+while count < 3:
+    result = random.randint(0, 1)
+    if result == 0:
+        print("H")
+        count += 1
+else:
+        print("S")
+        count = 0
+
+
+print("6 sunkesniu uzduotis".center(60, "_"))
+
+
+
+petro_count = 0
+kazio_count = 0
+
+while petro_count < 222 and kazio_count < 222:
+    petro_taskai = random.randint(10, 20)
+    kazio_taskai = random.randint(5, 25)
+
+    petro_count += petro_taskai
+    kazio_count += kazio_taskai
+
+    if petro_taskai > kazio_taskai:
+        winner = "Petras"
+    elif kazio_taskai > petro_taskai:
+        winner = "Kazys"
+    else:
+        winner = "Lygiosios"
+print(f"Petro taskai: {petro_taskai}, Kazio taskai: {kazio_taskai}. Laimejo: {winner}")
