@@ -180,3 +180,29 @@ for i in range(vidurys - 1, -1, -1):
     zvaigzdutes = '*' * (2 * i + 1)
     print(tarpai + zvaigzdutes)
 
+print("9 uzduotis".center(60, "_"))
+
+
+
+
+skaiciai = [random.randint(0, 201) for _ in range(50)]
+random.shuffle(skaiciai)
+stringas = " ".join(str(s) for s in skaiciai)
+print(stringas)
+
+
+
+def ar_pirminis(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+skaiciai_list = [int(x) for x in stringas.split()]
+pirminiai = sorted([x for x in skaiciai_list if ar_pirminis(x)])
+
+antras_stringas = " ".join(str(s) for s in pirminiai)
+print("2 stringas (tik pirminiai, rūšiuoti):", antras_stringas)
