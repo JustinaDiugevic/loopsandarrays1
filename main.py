@@ -206,3 +206,22 @@ pirminiai = sorted([x for x in skaiciai_list if ar_pirminis(x)])
 
 antras_stringas = " ".join(str(s) for s in pirminiai)
 print("2 stringas (tik pirminiai, rūšiuoti):", antras_stringas)
+
+print("1 uzduotis MASYVAI".center(60, "_"))
+
+array = [random.randint(5,25) for _ in range(39)]
+print(array)
+
+didesni_uz_10 = 0
+
+for i in array:
+    if i > 10:
+        didesni_uz_10 += 1
+print("Reiksmes didesnes uz 10:", didesni_uz_10)
+print("Maziausias skaicius: ", min(array))
+print("Didziausias skaicius: ", max(array))
+print("Suma: ", sum(array))
+
+naujas_masyvas = [reiksme - indeksas for indeksas, reiksme in enumerate(array)]
+print("Naujas masyvas:", naujas_masyvas)
+
